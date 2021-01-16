@@ -3,7 +3,7 @@
  
 (1) The experimental results on the 10 partitions in SUN397: 
  
-| Data | Single Crop | Ten Crop |
+| Data | Single Crop Accuracy (%) | Ten Crop Accuracy (%) |
 | :------: | :------: | :------: |
 | 01 | 73.1436 | 74.51 |
 | 02 | 73.1689 | 74.93 |
