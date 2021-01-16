@@ -8,27 +8,6 @@ transfer learning : frozen some layers and only finetune the rest layers
 nohup python -W ignore train_SUN397_data01_finetune_last_fc_20200601.py -a sksa_resnet101 --data /mnt/disk/home1/clq/datasets/SUN397/data01/ --epochs 100 --schedule 30 60 90 95  --lr 0.1 --train-batch 256 --test-batch 64 \
 --gamma 0.1 -c checkpoints/SUN397/20200601_data01_sksa_resnet101_finetune_last_fc --gpu-id 3 \
 >log_SUN397_data01_20200601.txt 2>&1 &
-
-
-===========================================================================
-# CLQ-20191224
-(1) only finetune the last fc layer     flag_finetune_style = 0
--a sk_resnet101 --data /media/clq/Work/datasets/MIT67 --epochs 100 --schedule 30 60 90 95  --lr 0.01 --train-batch 32 --test-batch 24
---gamma 0.1 -c checkpoints/MIT67/sk_resnet101_frozen2_pretrained_Places365 --gpu-id 0
-
-Best acc:85.2985076904   (epoch = 36)
-
-********** change --lr 0.01 to --lr 0.0075
--a sk_resnet101 --data /media/clq/Work/datasets/MIT67 --epochs 100 --schedule 30 60 90 95  --lr 0.0075 --train-batch 32 --test-batch 24
---gamma 0.1 -c checkpoints/MIT67/sk_resnet101_frozen2_pretrained_Places365_lr0.0075 --gpu-id 0
-
-Best acc:85.2238845825    (epoch = 19)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-(2) finetune the last conv-stage and the last fc layer         flag_finetune_style = 1
--a sk_resnet101 --data /media/clq/Work/datasets/MIT67 --epochs 100 --schedule 30 60 90 95  --lr 0.01 --train-batch 32 --test-batch 24
---gamma 0.1 -c checkpoints/MIT67/sk_resnet101_frozen3_pretrained_Places365 --gpu-id 0
-
-Best acc:83.4328384399   (epoch = 80)
 ===========================================================================
 '''
 from __future__ import print_function
