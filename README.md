@@ -17,6 +17,4 @@
 | 10 | 72.8262 | 74.18 |
 | Average | 72.90 | 74.46 |
 
-The models trained on SUN397 can be downloaded from :
-链接：https://pan.baidu.com/s/1O2Pr6-NESJMOC_0NebdxHA 
-提取码：ghu3 
+The models trained on SUN397 can be downloaded from https://pan.baidu.com/s/1O2Pr6-NESJMOC_0NebdxHA (Password:ghu3)
